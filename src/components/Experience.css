@@ -103,8 +103,16 @@ h1 {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .experience-page {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust header font size */
+  }
+
   .timeline {
-    padding-left: 1rem;
+    padding-left: 10px;
   }
 
   .timeline::before {
@@ -116,6 +124,6 @@ h1 {
   }
 
   .experience-box {
-    margin-left: 1.5rem;
+    margin-left: 2rem; /* Adjust margin for mobile view */
   }
 }

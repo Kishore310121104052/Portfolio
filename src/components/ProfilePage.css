@@ -1,9 +1,7 @@
-/* ProfilePage.css */
 .profile-page {
   font-family: 'Arial', sans-serif;
 }
 
-/* Top menu */
 .top-menu {
   background-color: #d1a680;
   padding: 10px 0;
@@ -28,22 +26,15 @@
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  /* Add a smooth transition for hover effect */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.top-menu ul li a svg {
-  margin-right: 5px;
-}
-
 .top-menu ul li a:hover {
-  background-color: #8a5632;  /* Darker and stronger hover background color */
+  background-color: #8a5632;
   border-radius: 5px;
-  color: #2a9dcf;  /* Bright yellow text color on hover */
-  cursor: pointer;  /* Change cursor to pointer on hover */
+  color: #2a9dcf;
 }
 
-/* Profile container */
 .profile-container {
   display: flex;
   justify-content: space-between;
@@ -72,23 +63,19 @@ h2, h3 {
   margin-right: 10px;
   color: #000;
   text-decoration: none;
-  /* Smooth hover effect */
   transition: color 0.2s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: #2a9dcf;  /* Strong orange color on hover */
-  cursor: pointer;  /* Change cursor to pointer */
+  color: #2a9dcf;
 }
 
-/* Profile description */
 .profile-description p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
-/* Resume button */
 .resume-btn {
   padding: 10px 20px;
   font-size: 1rem;
@@ -97,22 +84,45 @@ h2, h3 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* Add a smooth transition for hover effect */
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .resume-btn:hover {
-  background-color: #8a5632; /* Darker hover background color */
-  color: #2a9dcf;  /* Bright yellow text color on hover */
-  cursor: pointer;  /* Change cursor to pointer */
+  background-color: #8a5632;
+  color: #2a9dcf;
 }
 
-/* Additional hover effects for buttons and links */
-button:hover, a:hover {
-  cursor: pointer;  /* Change cursor to pointer */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-details, .profile-description {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .top-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-menu ul li {
+    margin-bottom: 10px;
+  }
 }
 
-/* Apply smooth transitions to all interactive elements */
-button, a {
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+@media (max-width: 480px) {
+  .profile-description p {
+    font-size: 1rem;
+  }
+
+  .top-menu ul li a {
+    font-size: 1rem;
+  }
+
+  .resume-btn {
+    font-size: 0.9rem;
+  }
 }

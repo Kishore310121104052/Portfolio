@@ -1,3 +1,4 @@
+/* General Body Styles */
 body {
     font-family: 'Georgia', serif;
     background-color: #f5e0c3; /* Light beige background */
@@ -6,17 +7,19 @@ body {
     padding: 0;
 }
 
+/* Main Container */
 .extracurriculars-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
-.extracurriculars-title text
-h1 {
+
+/* Title Styles */
+.extracurriculars-title h1 {
     font-size: 24px;
     margin: 0;
     color: #080808;
-    
+    text-align: center; /* Center align title */
 }
 
 .extracurriculars .back-arrow {
@@ -28,40 +31,26 @@ h1 {
     top: 10%;
 }
 
+/* Logo Container */
 .logo-container {
     display: flex;
     flex-direction: column; /* Stack logo and title */
     align-items: center; /* Center align */
     margin-top: 50px; /* Add space above */
-    padding-left: 0%;
 }
 
+/* Logo Styles */
 .logo {
     width: 100px; /* Adjust size as needed */
     height: auto;
 }
 
-.extracurriculars-title {
-    margin-top: 10px; /* Space between logo and title */
-    font-size: 36px; /* Adjust font size as needed */
-    color: #4a3f35; /* Match the title color */
-    text-align: center; /* Center align text */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), /* Dark shadow */
-                 0 0 25px rgba(0, 204, 255, 0.8); /* Blue glow */
-    transition: text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
-}
-
-.extracurriculars-title:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 1), /* Bright white glow on hover */
-                 0 0 20px rgba(0, 204, 255, 1), /* Strong blue glow on hover */
-                 0 0 30px rgba(0, 204, 255, 1); /* Extra glow effect */
-    transform: scale(1.05); /* Slightly enlarge the text on hover */
-}
-
+/* Section Styles */
 .extracurriculars-content {
     margin-top: 20px;
 }
 
+/* Individual Section Styles */
 .section {
     display: flex;
     margin-bottom: 40px;
@@ -86,6 +75,7 @@ h1 {
     font-size: 1.1em;
 }
 
+/* Alternating Section Layout */
 .section:nth-child(odd) {
     flex-direction: row-reverse;
 }
@@ -94,24 +84,50 @@ h1 {
     margin-right: 0;
     margin-left: 20px;
 }
-/* src/components/Extracurriculars.css */
 
-/* Existing styles... */
-
-.extracurriculars .feedback-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF;
+/* Feedback Button Styling */
+.feedback-button {
+    position: fixed; /* Keep it fixed to the viewport */
+    bottom: 20px; /* Space from bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for true center */
+    background-color: #000000; /* Green background */
     color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 12px 24px; /* More padding for a bigger button */
+    border-radius: 50px; /* Rounded button */
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger font size */
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.extracurriculars .feedback-button:hover {
-    background-color: #0056b3;
+.feedback-button:hover {
+    background-color: #2a9dcf; /* Darker green on hover */
+    transform: translateX(-50%) scale(1.05); /* Scale on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .extracurriculars-title h1 {
+        font-size: 20px; /* Adjust title font size for mobile */
+    }
+    
+    .section {
+        flex-direction: column; /* Stack elements on smaller screens */
+    }
+
+    .section-image {
+        width: 100%; /* Full width for images on mobile */
+        margin: 0 0 20px 0; /* Margin adjustment */
+    }
+
+    /* Center feedback button for mobile */
+    .feedback-button {
+        bottom: 10px; /* Slightly less margin on mobile */
+        padding: 10px 20px; /* Adjust padding for mobile */
+        font-size: 16px; /* Smaller font size on mobile */
+    }
 }
