@@ -1,0 +1,176 @@
+/* src/components/Education.css */
+
+.education-page {
+  background-color: #e5d0b6; /* Beige-like background */
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align the header */
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 1rem; /* Position it at the far left */
+  font-size: 2rem; /* Slightly larger size for the arrow */
+  color: black;
+}
+
+
+.education-page h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #080808;
+  text-align: center; /* Center align the title */
+  margin: 0; /* Remove margin for better centering */
+  padding-left: 2rem; /* Add left padding to separate from the back arrow */
+}
+
+.education-page .timeline {
+  width: 80%;
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.education-page .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px; /* Change alignment for Education page */
+  width: 4px; /* Set the width to 4px */
+  background-color: #080808; /* Change background color to #040404 */
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.education-page .timeline-dot {
+  position: absolute;
+  left: 24px; /* Align with the straight line */
+  top: 0; /* Center the dot vertically on the line */
+  width: 1rem;
+  height: 1rem;
+  background-color: #080808;
+  border-radius: 50%;
+}
+
+.education-page .education-box {
+  background-color: #f5e8d0; /* Light cream color inside the box */
+  padding: 2rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #a58c71; /* Border similar to the text color */
+  border-radius: 0.5rem;
+  font-family: 'Georgia', serif; /* Serif font for classic style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 3rem; /* Space the boxes away from the timeline */
+  position: relative; /* Add this for absolute positioning of the line */
+}
+
+/* Connection line with increased size */
+.education-item:after {
+  content: '';
+  position: absolute;
+  left: -1rem; /* Align with the left side of the box */
+  top: 20%; /* Center the line vertically */
+  width: 4rem; /* Increase the length of the connecting line */
+  height: 2px; /* Thickness of the connecting line */
+  background-color: #080808; /* Color of the line */
+  transform: translateY(-50%); /* Center the line vertically */
+}
+
+/* Dot on the connection line */
+.education-item:before {
+  content: '';
+  position: absolute;
+  left: -2rem; /* Align with the connection line */
+  top: 20%; /* Center the dot vertically */
+  width: 1rem; /* Width of the dot */
+  height: 1rem; /* Height of the dot */
+  background-color: #080808; /* Dot color */
+  border-radius: 50%; /* Make it circular */
+  transform: translateY(-50%); /* Center the dot vertically */
+}
+
+.education-page .education-box h2 {
+  font-size: 1.75rem; /* Increase header size */
+  font-weight: bold;
+  color: #080808; /* Darker text */
+  margin-bottom: 0.5rem;
+}
+
+.education-page .education-box p {
+  color: #080808; /* Dark text */
+  line-height: 1.7; /* Line height for readability */
+  font-size: 1.25rem; /* Increase paragraph font size */
+}
+
+.education-page .education-box strong {
+  font-weight: bold;
+  color: #080808;
+}
+
+.education-page .education-box .subtext {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* Hover effect for education boxes */
+.education-page .education-box:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .education-page {
+    padding: 1.5rem;
+  }
+
+  .education-page .education-box {
+    padding: 1.5rem;
+  }
+
+  .education-page .timeline {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .education-page .timeline::before {
+    left: 0.25rem;
+  }
+
+  .education-page .timeline-dot {
+    left: 0.25rem;
+  }
+
+  .education-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .education-page .education-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .education-page .education-box p {
+    font-size: 1.1rem;
+  }
+
+  .education-item:after {
+    left: -1rem; /* Adjust line position for mobile view */
+    width: 3rem; /* Adjust width for mobile */
+  }
+}

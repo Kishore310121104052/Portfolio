@@ -1,0 +1,117 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5e0c3; /* Light beige background */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+}
+
+.extracurriculars-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.extracurriculars-title text
+h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #080808;
+    
+}
+
+.extracurriculars .back-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    left: 70px;
+    top: 10%;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Stack logo and title */
+    align-items: center; /* Center align */
+    margin-top: 50px; /* Add space above */
+    padding-left: 0%;
+}
+
+.logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+.extracurriculars-title {
+    margin-top: 10px; /* Space between logo and title */
+    font-size: 36px; /* Adjust font size as needed */
+    color: #4a3f35; /* Match the title color */
+    text-align: center; /* Center align text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), /* Dark shadow */
+                 0 0 25px rgba(0, 204, 255, 0.8); /* Blue glow */
+    transition: text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.extracurriculars-title:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), /* Bright white glow on hover */
+                 0 0 20px rgba(0, 204, 255, 1), /* Strong blue glow on hover */
+                 0 0 30px rgba(0, 204, 255, 1); /* Extra glow effect */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+.extracurriculars-content {
+    margin-top: 20px;
+}
+
+.section {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.section-image {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-text h2 {
+    color: #4a3f35;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-text p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.section:nth-child(odd) .section-image {
+    margin-right: 0;
+    margin-left: 20px;
+}
+/* src/components/Extracurriculars.css */
+
+/* Existing styles... */
+
+.extracurriculars .feedback-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.extracurriculars .feedback-button:hover {
+    background-color: #0056b3;
+}

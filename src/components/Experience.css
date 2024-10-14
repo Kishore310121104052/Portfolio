@@ -1,0 +1,121 @@
+/* src/components/Experience.css */
+
+.experience-page {
+  padding: 20px;
+  background-color: #e5d0b6;
+  font-family: 'Arial', sans-serif;
+  color: #080808;
+  min-height: 100vh;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align the logo and text */
+  background-color: transparent;
+  padding: 0;
+  color: #080808;
+  position: relative;
+}
+
+.experience .back-arrow {
+  font-size: 24px;
+  color: #080808;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #080808;
+  padding-left: 2%;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 42px;
+  width: 4px;
+  background-color: #080808; /* Timeline vertical line */
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #080808;
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 20px; /* Adjust for alignment with box */
+}
+
+.experience-box {
+  background-color: #f5e8d0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:before {
+  content: '';
+  position: absolute;
+  top: 27px; /* Line from dot to box */
+  left: 25px;
+  width: 2rem;
+  height: 2px;
+  background-color: #080808;
+}
+
+.experience-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #080808;
+}
+
+.experience-box p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.experience-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-dot {
+    left: 10px;
+  }
+
+  .experience-box {
+    margin-left: 1.5rem;
+  }
+}

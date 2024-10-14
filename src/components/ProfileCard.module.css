@@ -1,0 +1,54 @@
+/* ProfileCard.module.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.heroSection {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left horizontally */
+  align-items: center;
+  height: 100vh;
+  background-image: url('../assets/1709785100750.jpg'); /* Ensure the image path is correct */
+  background-size: cover;
+  background-position: center;
+  padding-left: 50px; /* Optional: Add some left padding for spacing */
+}
+
+.heroContent {
+  text-align: left; /* Align text to the left */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  color: #000;
+}
+
+.heroContent p {
+  font-size: 2rem;
+  color: #333;
+}
+
+.discoverBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.discoverBtn:hover {
+  background-color: #444;
+}
